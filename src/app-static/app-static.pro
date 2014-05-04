@@ -1,19 +1,17 @@
-#
-# Application Static Libary Project for CuteMarkEd
-#
-# Github : https://github.com/cloose/CuteMarkEd
-#
+include(../../definitions.pri)
 
 QT     += gui
-CONFIG += staticlib
 
 TARGET = app-static
 TEMPLATE = lib
-DESTDIR = $$PWD/../libs
+
+DESTDIR = $$LIB_DIR
+
+CONFIG += staticlib
 
 INCLUDEPATH += $$PWD
-INCLUDEPATH += $$PWD/../3rdparty/hunspell/src
-INCLUDEPATH += $$PWD/../3rdparty/discount
+include(../../3rdparty/hunspell.pri)
+include(../../3rdparty/discount.pri)
 
 SOURCES += \
     snippets/jsonsnippettranslator.cpp \
@@ -33,13 +31,3 @@ HEADERS += \
     converter/markdowndocument.h \
     converter/discountmarkdownconverter.h \
     spellchecker/dictionary.h
-
-#unix:!symbian {
-#    maemo5 {
-#        target.path = /opt/usr/lib
-#    } else {
-#        target.path = /usr/lib
-#    }
-#    INSTALLS += target
-#}
-

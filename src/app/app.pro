@@ -1,8 +1,4 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2013-03-16T11:40:15
-#
-#-------------------------------------------------
+include(../../definitions.pri)
 
 QT       += core gui webkitwidgets printsupport
 
@@ -10,7 +6,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = cutemarked
 TEMPLATE = app
-DESTDIR = $$PWD/../build
+
+DESTDIR = $$BUILD_DIR
 
 unix {
   CONFIG += link_pkgconfig
@@ -127,11 +124,11 @@ QMAKE_EXTRA_COMPILERS += lrelease
 include(../app-static.pri)
 include(../peg-markdown-highlight.pri)
 
-include(../3rdparty/discount.pri)
-include(../3rdparty/hunspell.pri)
+include(../../3rdparty/discount.pri)
+include(../../3rdparty/hunspell.pri)
 
 with_hoedown {
-    include(../3rdparty/hoedown.pri)
+    include(../../3rdparty/hoedown.pri)
 }
 
 
