@@ -1,8 +1,4 @@
-#
-# Unit Test Project for CuteMarkEd
-#
-# Github : https://github.com/cloose/CuteMarkEd
-#
+include(../../definitions.pri)
 
 QT += testlib
 
@@ -26,13 +22,6 @@ HEADERS += \
 
 target.CONFIG += no_default_install
 
-INCLUDEPATH += $$PWD/../../app-static
-DEPENDPATH += $$PWD/../../app-static
+include(../../src/app-static.pri)
 
-unix {
-    LIBS += -L/usr/lib
-}
-LIBS += -L$$PWD/../../libs
-
-include(../../app-static.pri)
 

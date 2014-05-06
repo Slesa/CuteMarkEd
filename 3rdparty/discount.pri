@@ -1,14 +1,16 @@
 #
 # Discount library
 #
+include(../definitions.pri)
+
 win32 {
-    INCLUDEPATH += $$PWD/../3rdparty/discount
-    DEPENDPATH += $$PWD/../3rdparty/discount
+    INCLUDEPATH += $$PWD/discount
+    DEPENDPATH += $$PWD/discount
     LIBS += -ldiscount
 }
-unix {
-    INCLUDEPATH += /usr/include
-    LIBS += -lmarkdown
-}
 
+unix {
+     INCLUDEPATH += /usr/include
+     LIBS += -lmarkdown
+}
 

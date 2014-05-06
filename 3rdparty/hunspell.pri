@@ -1,9 +1,11 @@
 #
 # hunspell
 #
+include(../definitions.pri)
+
 win32 {
-    INCLUDEPATH += $$PWD/../3rdparty/hunspell/src
-    DEPENDPATH += $$PWD/../3rdparty/hunspell/src
+    INCLUDEPATH += $$PWD/hunspell/src
+    DEPENDPATH += $$PWD/hunspell/src
 }
 unix {
     PKGCONFIG += hunspell

@@ -30,7 +30,7 @@ unix {
 }
 LIBS += -L$$PWD/../../libs
 
-include(../../app-static.pri)
+include(../../src/app-static.pri)
 
 include(../../3rdparty/discount.pri)
 include(../../3rdparty/hunspell.pri)
